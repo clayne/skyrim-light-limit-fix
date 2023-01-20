@@ -47,6 +47,13 @@ void Lighting::ModifyPass(reshade::api::command_list* cmd_list)
 		} else {
 			return;
 		}
+
+		auto context = RE::BSRenderManager::GetSingleton()->GetRuntimeData().context;
+		auto renderer = BSGraphics::Renderer::QInstance();
+
+		ID3D11ShaderResourceView* views[1];
+		views[0] = renderer->pDepthStencils[DEPTH_STENCIL_TARGET_MAIN].DepthSRV;
+		context->PSSetShaderResources(17, 1, views);
 	}
 
 }

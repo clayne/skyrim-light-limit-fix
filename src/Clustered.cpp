@@ -41,7 +41,7 @@ void Clustered::OnPresent()
 
 void Clustered::UpdateLights()
 {
-	uint32_t current_light_count = pointLightsMap.size();
+	//uint32_t current_light_count = (uint32_t)pointLightsMap.size();
 
 }
 

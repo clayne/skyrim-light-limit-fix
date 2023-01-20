@@ -1,8 +1,11 @@
 
 #include "RE/BSGraphicsTypes.h"
 #include "ENB/ENBSeriesAPI.h"
+
 #include "Clustered.h"
+
 #include "Lighting.h"
+#include "Grass.h"
 
 //#include "Deferred.h"
 
@@ -40,8 +43,10 @@ void Load()
 		logger::info("Registered addon");
 		Lighting::InstallHooks();
 		Lighting::GetSingleton()->Initialise();
-		Clustered::InstallHooks();
-		Clustered::GetSingleton()->Initialise();
+		Grass::InstallHooks();
+		Grass::GetSingleton()->Initialise();
+		//Clustered::InstallHooks();
+		//Clustered::GetSingleton()->Initialise();
 	} else {
 		logger::info("ReShade not present, not installing hooks");
 	}

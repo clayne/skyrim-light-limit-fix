@@ -78,7 +78,6 @@ public:
 	void Initialise();
 
 	void        OnPresent();
-	void        UpdateLights();
 	void        UpdateClusters();
 	static void OnPresentCallback(reshade::api::command_queue* queue, reshade::api::swapchain* swapchain, const reshade::api::rect* source_rect, const reshade::api::rect* dest_rect, uint32_t dirty_rect_count, const reshade::api::rect* dirty_rects);
 	
